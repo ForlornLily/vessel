@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vessel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/vessel.css">
+</head>
+
+<body>
+    <div id="container" class="vessel">
+        <div class="header" data-options="region:'north'">
+            <div class="vessel-left">
+                <div>left</div>
+            </div>
+            <div class="vessel-center" data-options="headerMenuData: menuData">
+                
+            </div>
+            <div class="vessel-right">
+                <div>right</div>
+            </div>
+        </div>
+        <div class="main" data-options="region:'center'">
+            123
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/vessel.js"></script>
+    <script type="text/javascript">
+    	var menuData = [{
+    			id: "guide",
+    			name: "教程",
+    			//icons: "",
+    			items: [{
+    				id: "init",
+    				name: "菜单1",
+                    items: [{
+                        id: "222",
+                        name: "菜单1子项5"
+                    },{
+                        id: "222",
+                        name: "菜单1子项6"
+                    }]
+    			},{
+                    id: "init",
+                    name: "菜单2"
+                }]
+    		}, {
+    			id: "api",
+    			name: "API"
+    		}];
+    	$("#container").vessel({
+    		onResizeSmall: function(e, ui) {
+    			//debugger
+    		},
+    		onResizeMiddle: function(e, ui) {
+    			//debugger
+    		},
+    		onResizeLarge: function(e, ui) {
+    			//debugger
+    		}
+    		/*headerMenu: true,
+    		headerMenuData: [{
+    			id: "",
+    			name: "教程",
+    			//icons: "",
+    			items: [{
+    				id: "",
+    				name: "HTML初始化"
+    			}]
+    		}, {
+    			id: "",
+    			name: "API",
+    		}]*/
+
+    	});
+    </script>
+</body>
+
+</html>
